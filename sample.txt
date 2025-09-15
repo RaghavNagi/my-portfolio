@@ -1,0 +1,657 @@
+import Self from "../utils/self.webp";
+import Chess from "../utils/chess.svg";
+import Book from "../utils/books.png";
+
+const About = () => {
+  return (
+    <div id="about" className="bg-[#212121] flex justify-between items-center gap-8 pt-24 px-12">
+      {/* Image (now same sizing as cards) */}
+      <div className="w-[28rem] aspect-[3/4] rounded-2xl shadow-lg overflow-hidden">
+        <img src={Self} alt="self" className="w-full h-full object-cover" />
+      </div>
+
+      {/* About Card (Unchanged) */}
+      <div className="w-[28rem] aspect-[3/4] bg-[#d3d2d2] rounded-2xl shadow-lg text-[#212121] p-6 flex flex-col">
+        <h3 className="text-3xl font-bold mb-6 border-b border-gray-400 pb-3 underline">
+          About
+        </h3>
+        <p className="text-2xl leading-relaxed flex-1">
+          I’m from <span className="font-bold">Patiala</span>, Punjab, currently in my 4th year of Computer Science
+          and Engineering at Chitkara University. I enjoy solving logical and
+          analytical problems, exploring new technologies, and continuously
+          improving my programming and development skills.
+        </p>
+        <span className="mt-6 text-sm text-gray-600">
+          Always learning • Always building
+        </span>
+      </div>
+
+      {/* Hobbies Card (MODIFIED) */}
+      <div className="w-[28rem] aspect-[3/4] bg-[#d3d2d2] rounded-2xl shadow-lg text-[#212121] p-6 flex flex-col">
+        {/* Title */}
+        <h3 className="text-3xl font-bold mb-4 border-b border-gray-400 pb-3 underline">
+          Hobbies
+        </h3>
+
+        {/* Content Container */}
+        <div className="flex-1 flex flex-col justify-center">
+          {/* Chess Item */}
+          <div className="flex items-center gap-5 p-2">
+            <img
+              src={Chess}
+              alt="chess icon"
+              className="w-12 h-16 flex-shrink-0" // Icon sizing
+            />
+            <div>
+              <p className="text-xl font-semibold">Playing Chess</p>
+              <a
+                href="https://www.chess.com/member/raghav_nagi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-700 hover:underline"
+              >
+                Chess Profile
+              </a>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-b border-gray-300 my-6 mx-2"></div>
+
+          {/* Books Item */}
+          <div className="flex items-center gap-5 p-2">
+            <img
+              src={Book}
+              alt="book icon"
+              className="w-12 h-12 flex-shrink-0" // Icon sizing
+            />
+            <div>
+              <p className="text-xl font-semibold">Reading Books</p>
+              <a
+                href="https://www.goodreads.com/user/show/146549726-raghav-nagi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-700 hover:underline"
+              >
+                Goodreads Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer pushes to the bottom */}
+        <span className="mt-auto pt-4 text-sm text-gray-600">
+          Exploring creativity beyond coding
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default About;
+
+
+
+
+
+
+import React from "react";
+import { Mail, Linkedin, Github, Twitter } from "lucide-react"; // Added Twitter
+
+const Contact = () => {
+  return (
+    <div id="contact" className="bg-[#212121] py-24 px-4 sm:px-8 md:px-12">
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-[#eeeeee] mb-6">
+        Contact Me
+      </h2>
+      <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+        I’d love to collaborate or just have a chat. Reach out through any of the platforms below or drop me a message.
+      </p>
+
+      {/* Social Links */}
+      <div className="flex justify-center gap-8 mb-16">
+        <a
+          href="mailto:raghavnagi81@gmail.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-gray-300 hover:text-white transition-colors"
+        >
+          <Mail size={32} />
+        </a>
+        <a
+          href="https://github.com/RaghavNagi"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-gray-300 hover:text-white transition-colors"
+        >
+          <Github size={32} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/raghav-nagi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+        >
+          <Linkedin size={32} />
+        </a>
+        <a
+          href="https://x.com/RaghavNagi33623"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+        >
+          <Twitter size={32} />
+        </a>
+      </div>
+
+    </div>
+  );
+};
+
+export default Contact;
+
+
+
+
+
+import React from 'react';
+import codingblocks from "../utils/codingblocks.jpeg";
+import gyansys from "../utils/gyansys.png"
+
+
+// data
+const experienceData = [
+  {
+    title: 'Organizing Executive',
+    company: 'Coding Blocks CUIET Chapter',
+    logo: codingblocks,
+    dates: 'Feb 2024 - Aug 2024',
+    description: [
+      'Planned and coordinated technical events, workshops, and codding sessions.',
+      'Managed logistics, scheduling, and resource allocation for smooth execution.',
+    ],
+  },
+  {
+    title: 'Discipline Head',
+    company: 'Coding Blocks CUIET Chapter',
+    logo: codingblocks,
+    dates: 'Aug 2024 - May 2025',
+    description: [
+      'Enforce chapter policies and maintained discipline to ensure a professional and respectful environment.',
+      'Resolve Conflicts and addressed disciplinary concerns, for a productive and positive team culture.',
+      'Played a key role in Organizing structured activities while maintaining order and efficiency within the chapter.'
+    ],
+  },{
+    title:'Software Developer Intern',
+    company:'GyanSys',
+    logo: gyansys,
+    dates: 'Jan 2026 - Ongoing',
+    description: [
+        'Coming Soon..'
+    ]
+  }
+];
+
+
+const Experience = () => {
+  return (
+    <div id="experience" className="bg-[#212121] py-24 px-4 sm:px-8 md:px-12">
+
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-16">
+        Work Experience
+      </h2>
+
+      {/* --- Timeline Container --- */}
+      <div className="relative container mx-auto">
+        {/* The Vertical Line */}
+        <div className="absolute h-full w-0.5 bg-gray-600 left-1/2 -translate-x-1/2"></div>
+
+        {/* --- Map over experiences --- */}
+        {experienceData.map((exp, index) => (
+          <div
+            key={index}
+            className={`mb-8 flex justify-between items-center w-full
+              ${index % 2 === 0 ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}
+          >
+            <div className="order-1 w-5/12"></div> {/* Invisible spacer */}
+
+            {/* --- The Dot on the timeline --- */}
+            <div className="z-20 flex items-center order-1 bg-[#eeeeee] shadow-xl w-6 h-6 rounded-full"></div>
+
+            {/* --- The Card --- */}
+            <div className="order-1 w-5/12 bg-[#eeeeee] rounded-lg shadow-lg px-6 py-4">
+              <div className="flex items-center gap-4 mb-2">
+                <img src={exp.logo} alt={`${exp.company} logo`} className="w-10 h-10 p-1 bg-white rounded-full shadow-md" />
+                <div>
+                  <h3 className="font-bold text-[#212121] text-xl">{exp.title}</h3>
+                  <p className="font-semibold text-gray-800">{exp.company}</p>
+                </div>
+              </div>
+              <p className="text-sm font-medium text-gray-900 mb-4">{exp.dates}</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                {exp.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Experience;
+
+
+
+
+
+
+
+
+
+
+
+import { useState } from "react";
+import Setup from "../utils/setup.jpeg";
+// Import motion and the CheckIcon
+import { motion, AnimatePresence } from "framer-motion";
+import { DocumentDuplicateIcon, CheckIcon } from "@heroicons/react/24/outline";
+import Navbar from "./Navbar";
+import TechStack from "./TechStack";
+import ScrambleText from "./ScrambleText";
+
+function MainBackground() {
+  const [copied, setCopied] = useState(false);
+  const textToCopy = "raghavnagi81@gmail.com";
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => setCopied(true))
+      .catch(() => setCopied(false));
+
+    setTimeout(() => setCopied(false), 2000); // Changed to 2 seconds for a better feel
+  };
+
+  return (
+    <>
+      <Navbar />
+
+      <div id="home" className="flex flex-col md:flex-row justify-between items-start relative pt-32 md:pt-36 px-6 md:px-12 gap-8 bg-[#212121] text-white min-h-screen">
+        {/* Left Section */}
+        <div className="flex flex-col gap-10 md:gap-12 md:w-7/12 mt-12 md:mt-16">
+          {/* Heading */}
+          <h1 className="text-4xl md:text-5xl font-bold text-[#eeeeee] z-40">
+  <ScrambleText text="Software Engineer Trainee" />
+</h1>
+
+          {/* Two-liner */}
+          <p className="text-md md:text-lg text-gray-300">
+            A passionate Computer Science student and aspiring software engineer, building innovative solutions with Java, JavaScript, and modern web technologies. Constantly learning and creating projects that make an impact.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/RaghavNagi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-white rounded hover:underline transition duration-300"
+            >
+              Github
+            </a>
+
+            {/* MODIFIED BUTTON */}
+            <button
+              onClick={handleCopy}
+              className="flex items-center justify-center gap-2 w-28 h-10 bg-[#616161] rounded relative"
+            >
+              <AnimatePresence initial={false} mode="wait">
+                {!copied ? (
+                  <motion.span
+                    key="email"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex items-center gap-2"
+                  >
+                    <DocumentDuplicateIcon className="w-5 h-5" />
+                    Email
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="copied"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex items-center gap-2 text-[#eeeeee]"
+                  >
+                    <CheckIcon className="w-5 h-5" />
+                    Copied!
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
+        </div>
+
+        {/* Right Section - Image */}
+        <div className="w-full md:w-5/12 overflow-hidden rounded-lg">
+          <img
+            src={Setup}
+            alt="setup"
+            className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      </div>
+
+      <div className="bg-[#eeeeee] px-6 md:px-12 pb-12 -mt-28 md:-mt-32">
+        <TechStack />
+      </div>
+    </>
+  );
+}
+
+export default MainBackground;
+
+
+
+
+
+
+
+import React from 'react';
+
+const Navbar = () => {
+  return (
+    <nav 
+      className="bg-[#eeeeee] fixed flex justify-between items-center gap-12 top-4 left-2 py-4 px-4 md:px-8 rounded-lg z-50" 
+      style={{ width: 'calc(100% - 16px)' }}
+    >
+      <div className="font-serif text-4xl">
+        <a href="#home"><h1>Raghav Nagi</h1></a>
+      </div>
+      <div className="flex gap-4 font-serif items-center"> {/* Use items-center for vertical alignment */}
+        <a href="#about" className="text-xl hover:underline">About</a>
+        <a href="#projects" className="text-xl hover:underline">Projects</a>
+        <a href="#experience" className="text-xl hover:underline">Experience</a>
+        <a href="#contact" className="text-xl hover:underline">Contact</a>
+
+        {/* --- MODIFIED RESUME BUTTON --- */}
+        <a 
+          href="/MyResume.pdf" // The path to your PDF in the public folder
+          target="_blank"                 // This opens the link in a new tab
+          rel="noopener noreferrer"       // Recommended for security
+          className="bg-[#212121] text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-gray-700 transition-colors" // Styling classes
+        >
+          <span className="hover:underline">Resume</span>
+        </a>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import { ReactComponent as Reactjs } from "../utils/techs/react.svg";
+import { ReactComponent as Nodejs } from "../utils/techs/node.svg";
+import { ReactComponent as MySql } from "../utils/techs/mysql.svg";
+import { ReactComponent as Tailwind } from "../utils/techs/tailwind.svg";
+import { ReactComponent as Express } from "../utils/techs/express.svg";
+import { ReactComponent as Html } from "../utils/techs/html.svg";
+import { ReactComponent as Css } from "../utils/techs/css.svg";
+import { ReactComponent as Python } from "../utils/techs/python.svg";
+import vehicle from "../utils/projects/vehicle-ecom.jpeg"
+import eballot from "../utils/projects/eballot.png"
+// --- Import your project images here ---
+// For example:
+// import projectOneImage from '../assets/project-one.png';
+// import projectTwoImage from '../assets/project-two.png';
+
+// --- Data for your projects ---
+const projectsData = [
+  {
+    title: 'Vehicle E-commerce',
+    description: 'A full-featured e-commerce website with product listings, a shopping cart, and a secure checkout process, built with the MERN stack.',
+    image: vehicle,
+    techStack: [Reactjs, Nodejs, Express, MySql, Tailwind],
+    codeLink: 'https://github.com/Pranav78654/vehicle-ecom',
+  },
+  {
+    title: 'E-Ballot',
+    description: 'A secure Python eBallot system enabling online voting, ensuring voter authentication, data integrity, confidentiality, and real-time result tallying.',
+    image: eballot,
+    techStack: [Html, Css, Python],
+    codeLink: 'https://github.com/RaghavNagi/E-Ballot',
+  },
+];
+
+const Projects = () => {
+  return (
+    <div id="projects" className="bg-[#212121] py-24 px-4 sm:px-8 md:px-12">
+      {/* --- Section Title --- */}
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-[#eeeeee] mb-12">
+        Projects
+      </h2>
+
+      {/* --- Projects Container --- */}
+      <div className="flex flex-col gap-12 md:gap-16">
+        {projectsData.map((project, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center gap-8 bg-[#d3d2d2] rounded-lg shadow-lg overflow-hidden
+              ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`} 
+          >
+            {/* --- Project Image --- */}
+            <div className="w-full md:w-1/2">
+              <a href={project.codeLink} target='_blank' rel="noopener noreferrer"><img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              /></a>
+            </div>
+
+            {/* --- Project Details --- */}
+            <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#212121] mb-4">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {project.description}
+              </p>
+
+              {/* --- Tech Stack --- */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 flex items-center gap-2"
+                  >
+                    {typeof tech === 'string' ? (
+                      tech
+                    ) : (
+                      React.createElement(tech, { className: 'w-12 h-12' })
+                    )}
+                  </span>
+                ))}
+              </div>
+
+              {/* --- Buttons --- */}
+              <div className="flex gap-4">
+                <a
+                  href={project.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#212121] text-[#eeeeee] px-5 py-2 rounded-md hover:bg-gray-700 transition-colors"
+                >
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
+
+
+
+
+
+
+
+
+
+
+
+import { useState, useRef } from "react";
+
+const ScrambleText = ({ text }) => {
+  const [displayText, setDisplayText] = useState(text);
+  const intervalRef = useRef(null);
+
+  const getShuffled = () => {
+    return [...text].map(char => (Math.random() < 0.5 ? char : String.fromCharCode(33 + Math.floor(Math.random() * 94)))).join("");
+  };
+
+  const handleMouseEnter = () => {
+    if (intervalRef.current) return;
+
+    // Shuffle letters every 50ms for smoother animation
+    intervalRef.current = setInterval(() => {
+      setDisplayText(getShuffled());
+    }, 30);
+
+    // After 0.75s, progressively restore original text
+    setTimeout(() => {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+
+      const original = text.split("");
+      let step = 0;
+
+      const unscrambleInterval = setInterval(() => {
+        step++;
+        const newDisplay = original.map((char, idx) => (idx < step ? char : String.fromCharCode(33 + Math.floor(Math.random() * 94)))).join("");
+        setDisplayText(newDisplay);
+
+        if (step >= original.length) clearInterval(unscrambleInterval);
+      }, 30); // adjust speed of progressive unscramble
+    }, 300);
+  };
+
+  return (
+    <span
+      className="cursor-pointer inline-block text-[#eeeeee]"
+      onMouseEnter={handleMouseEnter}
+    >
+      {displayText}
+    </span>
+  );
+};
+
+export default ScrambleText;
+
+
+
+
+
+
+
+
+
+
+// import {ReactComponent as c} from "../utils/techs/c.svg"
+// import {ReactComponent as cpp} from "../utils/techs/cpp.svg"
+import {ReactComponent as Css} from "../utils/techs/css.svg"
+import {ReactComponent as Express} from "../utils/techs/express.svg"
+import {ReactComponent as Git} from "../utils/techs/git.svg"
+import {ReactComponent as Github} from "../utils/techs/github.svg"
+import {ReactComponent as Html} from "../utils/techs/html.svg"
+import {ReactComponent as Java} from "../utils/techs/java.svg"
+import {ReactComponent as Javascript} from "../utils/techs/javascript.svg"
+import {ReactComponent as MongoDB} from "../utils/techs/mongodb.svg"
+import {ReactComponent as MySql} from "../utils/techs/mysql.svg"
+import {ReactComponent as Node} from "../utils/techs/node.svg"
+import {ReactComponent as PostgresQl} from "../utils/techs/postgresql.svg"
+import {ReactComponent as Postman} from "../utils/techs/postman.svg"
+import {ReactComponent as ReactJs} from "../utils/techs/react.svg"
+import {ReactComponent as Tailwind} from "../utils/techs/tailwind.svg"
+import {ReactComponent as Vscode} from "../utils/techs/vscode.svg"
+
+export default function TechStack({ speed = 20 }) {
+  const icons = [
+    <Css key="3" className="w-12 h-12"/>,
+    <Express key="4" className="w-12 h-12"/>,
+    <Git key="5" className="w-12 h-12"/>,
+    <Github key="6" className="w-12 h-12"/>,
+    <Html key="7" className="w-12 h-12"/>,
+    <Java key="8" className="w-12 h-12"/>,
+    <Javascript key="9" className="w-12 h-12"/>,
+    <MongoDB key="10" className="w-12 h-12"/>,
+    <MySql key="11" className="w-12 h-12"/>,
+    <Node key="12" className="w-12 h-12"/>,
+    <PostgresQl key="13" className="w-12 h-12"/>,
+    <Postman key="14" className="w-12 h-12"/>,
+    <ReactJs key="15" className="w-12 h-12"/>,
+    <Tailwind key="16" className="w-12 h-12"/>,
+    <Vscode key="17" className="w-12 h-12"/>,
+  ];
+
+  const duplicated = [...icons, ...icons];
+
+  return (
+    <div className="w-full overflow-hidden py-4 bg-[#eeeeee] flex items-center gap-6 ">
+      
+      {/* Left Text */}
+      <div className="font-serif flex-shrink-0 font-semibold text-[#eeeeee] dark:text-gray-200 z-40 text-4xl">
+        My Tech Stack :
+      </div>
+
+      {/* Marquee Icons */}
+      <div className="overflow-hidden flex-1">
+        <style>{`
+          @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            display:flex;
+            gap:2rem;
+            align-items:center;
+            animation: marqueeScroll ${speed}s linear infinite;
+            will-change: transform;
+          }
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        <div className="marquee-track">
+          {duplicated.map((icon, i) => (
+            <div key={i} className="flex-shrink-0 text-gray-700 dark:text-gray-200">
+              {icon}
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  );
+}

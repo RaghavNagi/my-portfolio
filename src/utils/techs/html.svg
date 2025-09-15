@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="200" height="200" role="img" aria-label="HTML5 logo">
+  <path fill="#E44D26" d="M19 3l9 100 36 10 36-10 9-100z"/>
+  <path fill="#F16529" d="M64 113l29-8 8-92H64z"/>
+  <path fill="#EBEBEB" d="M64 52h-20l-1-12h21V28H41l.3 4 3 34H64zm0 32l-.1.1-16.7-4.5-1-11h-12l2 22 28 7.8.2-.1V84z"/>
+  <path fill="#fff" d="M63.9 52v12h19l-1.8 20-17.2 4.7v12.3l28-7.8 3-34 .3-4h-31.3zm0-24v12h34.7l.2-2 0-2 .3-4H63.9z"/>
+</svg>
